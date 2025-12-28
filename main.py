@@ -46,8 +46,8 @@ def get_random_sentence(length):
 
 # Main loop, prompts for new sentences.
 print("Input anything to continue, x or q to exit.")
-user_input = ""
-while(user_input != "x" or user_input != "1"):
+user_input = " "
+while(not user_input.startswith(tuple(['x','q']))):
     sentence_length = get_random_int(8,18)
     get_random_sentence(sentence_length)
     user_input = input()
